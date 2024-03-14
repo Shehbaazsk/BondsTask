@@ -138,4 +138,4 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # EMAIL_HOST_USER = 'your@djangoapp.com'
 # EMAIL_HOST_PASSWORD = 'your password'
 
-CRONJOBS = [('*/1 * * * *', 'email_sender_app.cron_jobs.count_of_email','>>' + os.path.join(BASE_DIR,'log/debug.log' + ' 2>&1 '))]
+CRONJOBS = [('0 */1 * * *', 'email_sender_app.cron_jobs.count_of_email','>>' + os.path.join(BASE_DIR,'log/debug.log' + ' 2>&1 '))]
